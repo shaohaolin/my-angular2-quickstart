@@ -1,0 +1,13 @@
+1: How does import work in Angular 2?
+	Relative path and absolute path for import different files, components.
+ 	posts:
+ 		http://stackoverflow.com/questions/34816470/how-does-import-work-in-angular-2
+ 		http://stackoverflow.com/questions/32191057/typescript-import-using-path-from-some-root
+
+2: Instance Angular 2 Component Two times
+	Bootstrap angular 2 compoents, different with bootstrap components and non-bootstrap components.
+	Cannot use single bootstrap component twice on the same page. Non-main components can be created
+	as much as you want.
+	posts:
+		http://stackoverflow.com/questions/34818238/instance-angular-2-component-two-times/34818494#34818494
+
