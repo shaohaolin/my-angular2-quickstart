@@ -1,0 +1,16 @@
+<div class="col s12 m6" *ngIf="hero">
+	<div class="superhero-container card">
+		<div class="card-header" style=" background-color: #46BBCA; padding: 10px 20px; font-weight: bold;">
+			<span class="card-title" style="color: white; text-transform: uppercase;">
+				{{hero.name}} details!
+			</span>				
+		</div>
+		<div class="card-content">
+			<div><span>id: </span>{{hero.id}}</div>
+			<div>
+				<span>name: </span>
+				<input [(ngModel)]="hero.name" placeholder="name" />
+			</div>				
+		</div>
+	</div>		
+</div>
