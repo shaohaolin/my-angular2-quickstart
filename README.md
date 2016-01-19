@@ -43,7 +43,7 @@ Boom, fixed the problem!
 
 ###4. How to pass and access input properties in a component class?
 Case produce:<br/>
-I learned how to pass properties from Angular 2 tutorial. It uses square brackets for binding and declares **inputs: [...]**. I can access the input properties in the component template without errors. However, I had a **property ... is undefined.** if I try to display the property in a component class.
+I learned how to pass properties from Angular 2 tutorial. It uses square brackets for binding and declares **inputs: [...]**. I can access the input properties in the component template without errors. However, I had a **property ... is undefined.** if I try to display the property in a component class.<br/>
 Parent template:
 ```html
 <dj-form *ngIf="openNewForm" [rankvalue]="currentRank"></dj-form>
