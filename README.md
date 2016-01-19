@@ -2,7 +2,7 @@
 
 This is a repo that was my first attempt of Angular2. I used Angular2 QuickStart as my seed project.
 
-This repo contains all my curiosity of Angular2 with my study notes that I found that it is interested to record.
+This repo contains all my curiosities of Angular2 with my study notes that I found that it is interesting to record.
 
 ##Notes
 ###1. How does import work in Angular 2?
