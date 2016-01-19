@@ -1,32 +1,39 @@
 import {Component, OnInit} from 'angular2/core';
-import {Hero} from './hero';
-import {HeroDetailComponent} from './hero-detail/hero-detail.component';
-import {HeroService} from './hero.service';
+import {Dj} from './dj';
+import {DjDetailComponent} from './dj-detail/dj-detail.component';
+import {DjFormComponent} from './dj-form/dj-form.component';
+import {DjService} from './dj.service';
 
 @Component({
 	selector: 'my-app',
-	templateUrl: 'app/heros.html',
+	templateUrl: 'app/dj.html',
 	styleUrls: ['hero-style.css'],
-	directives: [HeroDetailComponent],
-	providers: [HeroService]
+	directives: [DjDetailComponent, DjFormComponent],
+	providers: [DjService]
 })
 
 export class AppComponent implements OnInit { 
-	public title = 'Tour of Heroes';
-	public heroes: Hero[];
-	public selectedHero: Hero;
+	public title = 'Top DJs list of 2015';
+	public Djs: Dj[];
+	public selectedDj: Dj;
+	public openNewForm = false;
 
-	constructor(private _heroService: HeroService) { }
+	constructor(private _djService: DjService) { }
 
-	getHeroes() {
-		this._heroService.getHeroesSlowly().then(heroes => this.heroes = heroes);
+	getDjs() {
+		this._djService.getDjs().then(Djs => this.Djs = Djs);
 	}
 
 	ngOnInit() {
-		this.getHeroes();
+		this.getDjs();
 	}
 
-	onSelect(hero: Hero) {
-		this.selectedHero = hero;
+	onSelect(dj: Dj) {
+		this.selectedDj = dj;
+	}
+
+	addNewDj() {
+		console.log("Open a new form!");
+		this.openNewForm = true;
 	}
 }

@@ -1,4 +1,4 @@
-System.register(['angular2/core', './hero-detail/hero-detail.component', './hero.service'], function(exports_1) {
+System.register(['angular2/core', './dj-detail/dj-detail.component', './dj-form/dj-form.component', './dj.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,44 +8,52 @@ System.register(['angular2/core', './hero-detail/hero-detail.component', './hero
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_detail_component_1, hero_service_1;
+    var core_1, dj_detail_component_1, dj_form_component_1, dj_service_1;
     var AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (hero_detail_component_1_1) {
-                hero_detail_component_1 = hero_detail_component_1_1;
+            function (dj_detail_component_1_1) {
+                dj_detail_component_1 = dj_detail_component_1_1;
             },
-            function (hero_service_1_1) {
-                hero_service_1 = hero_service_1_1;
+            function (dj_form_component_1_1) {
+                dj_form_component_1 = dj_form_component_1_1;
+            },
+            function (dj_service_1_1) {
+                dj_service_1 = dj_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                function AppComponent(_heroService) {
-                    this._heroService = _heroService;
-                    this.title = 'Tour of Heroes';
+                function AppComponent(_djService) {
+                    this._djService = _djService;
+                    this.title = 'Top DJs list of 2015';
+                    this.openNewForm = false;
                 }
-                AppComponent.prototype.getHeroes = function () {
+                AppComponent.prototype.getDjs = function () {
                     var _this = this;
-                    this._heroService.getHeroesSlowly().then(function (heroes) { return _this.heroes = heroes; });
+                    this._djService.getDjs().then(function (Djs) { return _this.Djs = Djs; });
                 };
                 AppComponent.prototype.ngOnInit = function () {
-                    this.getHeroes();
+                    this.getDjs();
                 };
-                AppComponent.prototype.onSelect = function (hero) {
-                    this.selectedHero = hero;
+                AppComponent.prototype.onSelect = function (dj) {
+                    this.selectedDj = dj;
+                };
+                AppComponent.prototype.addNewDj = function () {
+                    console.log("Open a new form!");
+                    this.openNewForm = true;
                 };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        templateUrl: 'app/heros.html',
+                        templateUrl: 'app/dj.html',
                         styleUrls: ['hero-style.css'],
-                        directives: [hero_detail_component_1.HeroDetailComponent],
-                        providers: [hero_service_1.HeroService]
+                        directives: [dj_detail_component_1.DjDetailComponent, dj_form_component_1.DjFormComponent],
+                        providers: [dj_service_1.DjService]
                     }), 
-                    __metadata('design:paramtypes', [hero_service_1.HeroService])
+                    __metadata('design:paramtypes', [dj_service_1.DjService])
                 ], AppComponent);
                 return AppComponent;
             })();

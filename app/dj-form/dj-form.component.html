@@ -1,0 +1,18 @@
+<div class="col s12 m6">
+	<div class="card">
+		<div class="card-header" style=" background-color: #46BBCA; padding: 10px 20px; font-weight: bold;">
+			<span class="card-title" style="color: white; text-transform: uppercase;">DJ Form</span>
+		</div>
+		<div class="card-content">
+			<form>
+				<div class="form-group">
+					<label for="name">Name</label>
+					<input type="text" class="form-control" required 
+						   [(ngModel)] = "newDj.name"
+						   />
+				</div>
+				<button type="submit" class="btn btn-default" (click)="createDj()">Save</button>
+			</form>
+		</div>
+	</div>
+</div>
