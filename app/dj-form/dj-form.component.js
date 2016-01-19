@@ -27,6 +27,10 @@ System.register(['angular2/core'], function(exports_1) {
                 DjFormComponent.prototype.createDj = function () {
                     console.log(this.newDj);
                 };
+                DjFormComponent.prototype.clearInputs = function () {
+                    delete this.newDj;
+                    this.newDj = {};
+                };
                 DjFormComponent = __decorate([
                     core_1.Component({
                         selector: 'dj-form',

@@ -11,7 +11,14 @@
 						   [(ngModel)] = "newDj.name"
 						   />
 				</div>
-				<button type="submit" class="btn btn-default" (click)="createDj()">Save</button>
+				<div class="form-group">
+					<label for="rank">Rank</label>
+					<input type="number" class="form-control" required 
+						   [(ngModel)] = "newDj.rank"
+						   />
+				</div>
+				<button class="btn btn-default" (click)="createDj()">Save</button>
+				<button class="btn btn-default" (click)="clearInputs()">Clear</button>
 			</form>
 		</div>
 	</div>

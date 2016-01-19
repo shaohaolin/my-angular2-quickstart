@@ -9,7 +9,7 @@ import { Dj } from '../dj';
 
 export class DjFormComponent {
     
-	public newDj =  <Dj>{};
+	public newDj = <Dj>{};
 
 	submitted = false;
 
@@ -20,5 +20,10 @@ export class DjFormComponent {
 
 	createDj() {
 		console.log(this.newDj);
+	}
+
+	clearInputs() {
+		delete this.newDj;
+		this.newDj = <Dj>{};
 	}
  }
