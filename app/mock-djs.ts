@@ -16,12 +16,11 @@ export var Djs: Dj[] = [
 	{ id: 23, name: 'Alesso', rank: 13 },
 	{ id: 24, name: 'W & W', rank: 14 },
 	{ id: 25, name: 'Dash Berlin', rank: 15 },
-	{ id: 25, name: 'DVBBS', rank: 16 },
-	{ id: 25, name: 'Axwell & Ingr0sso', rank: 17 },
-	{ id: 25, name: 'Nicky Romero ', rank: 18 },
-	{ id: 25, name: 'Blasterjaxx', rank: 19 },
-	{ id: 25, name: 'Diplo', rank: 20 }
+	{ id: 26, name: 'DVBBS', rank: 16 },
+	{ id: 27, name: 'Axwell & Ingr0sso', rank: 17 },
+	{ id: 28, name: 'Nicky Romero ', rank: 18 },
+	{ id: 29, name: 'Blasterjaxx', rank: 19 },
+	{ id: 30, name: 'Diplo', rank: 20 }
 ];
-
 
 // Source from: http://djmag.com/top100dj

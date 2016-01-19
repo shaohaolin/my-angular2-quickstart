@@ -17,11 +17,20 @@ export class AppComponent implements OnInit {
 	public Djs: Dj[];
 	public selectedDj: Dj;
 	public openNewForm = false;
+	public currentRank: number;
 
 	constructor(private _djService: DjService) { }
 
 	getDjs() {
-		this._djService.getDjs().then(Djs => this.Djs = Djs);
+		
+		this._djService.getDjs()
+			.then( (response) => {
+				this.Djs = response;
+				this.currentRank = this.Djs.length;
+				console.log(this.currentRank);
+			} );
+
+		//this._djService.getDjs().then(Djs => this.Djs = Djs );
 	}
 
 	ngOnInit() {
