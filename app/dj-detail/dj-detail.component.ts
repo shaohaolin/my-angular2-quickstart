@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {RouteParams, ROUTER_DIRECTIVES} from 'angular2/router';
 import {Dj} from '../dj';
 
 @Component({

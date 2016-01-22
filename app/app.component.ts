@@ -1,48 +1,23 @@
-import {Component, OnInit} from 'angular2/core';
-import {Dj} from './dj';
+import {Component} from 'angular2/core';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {DjsComponent} from './dj/djs.component';
 import {DjDetailComponent} from './dj-detail/dj-detail.component';
-import {DjFormComponent} from './dj-form/dj-form.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+//import {DjFormComponent} from './dj-form/dj-form.component';
 import {DjService} from './dj.service';
 
 @Component({
 	selector: 'my-app',
-	templateUrl: 'app/dj.html',
-	styleUrls: ['hero-style.css'],
-	directives: [DjDetailComponent, DjFormComponent],
-	providers: [DjService]
+	templateUrl: 'app/app.html',
+	directives: [ROUTER_DIRECTIVES],
+	providers: [DjService, ROUTER_PROVIDERS]
 })
+@RouteConfig([
+	{path: '/dashboard', name:'Dashboard', component: DashboardComponent, useAsDefault: true},
+	{ path: '/djs', name:  'Djs', component: DjsComponent}
+	//{ path: '/detail/:id', name: 'DjDetail', component: DjDetailComponent}
+])
 
-export class AppComponent implements OnInit { 
-	public title = 'Top DJs list of 2015';
-	public Djs: Dj[];
-	public selectedDj: Dj;
-	public openNewForm = false;
-	public currentRank: number;
-
-	constructor(private _djService: DjService) { }
-
-	getDjs() {
-		
-		this._djService.getDjs()
-			.then( (response) => {
-				this.Djs = response;
-				this.currentRank = this.Djs.length;
-				console.log(this.currentRank);
-			} );
-
-		//this._djService.getDjs().then(Djs => this.Djs = Djs );
-	}
-
-	ngOnInit() {
-		this.getDjs();
-	}
-
-	onSelect(dj: Dj) {
-		this.selectedDj = dj;
-	}
-
-	addNewDj() {
-		console.log("Open a new form!");
-		this.openNewForm = true;
-	}
+export class AppComponent { 
+	public title = 'Tour of Djs';
 }

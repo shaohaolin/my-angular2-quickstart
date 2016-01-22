@@ -16,7 +16,9 @@ export class DjService {
 	}
 
 	getLastId() {
-		return Djs.length;
+		var lastDj = Djs.pop();
+		Djs.push(lastDj);
+		return lastDj.id;
 	}
 	
 	addDj(dj: Dj) {

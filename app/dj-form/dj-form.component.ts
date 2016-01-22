@@ -25,13 +25,12 @@ export class DjFormComponent {
 	//get diagnostic() { return JSON.stringify(this.Dj);}
 
 	createDj() {
-		console.log("Name: " + this.newDj.name);
-		console.log("Rank: " + this.newDj.rank);
 
 		if (typeof this.newDj.name !== 'undefined' && typeof this.newDj.rank !== 'undefined') {
 
 			this.newId = this._djService.getLastId();
-			this.newDj.id = this.newId++;
+			this.newId++;
+			this.newDj.id = this.newId;
 			this.rankvalue++;
 			this._djService.addDj(this.newDj);
 			console.log(this.newDj);
