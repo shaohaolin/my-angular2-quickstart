@@ -86,4 +86,4 @@ export class DjFormComponent {
 No more non sense `inputs` array in component. I like this solution because it clearly shows the scope of input properties and also it looks like Angular 1 for people like me did a lot angular 1 projects. `@input() rankvalue'` is similar to `$scope.rankvalue` for binding value to directive in angular 1. [Tom Buyse](http://tombuyse.com/accessing-input-properties-in-a-component-class-angular-2/) also mentioned that we are not able to access the input properites before the view is rendering.
 
 ###5. Is selector attribute necessary for Component?
-	Selector is not necessary. I discovered this after I implemented routing in the app. It's no harm to have one in the component anyway.
+Selector is not necessary. I discovered this after I implemented routing in the app. It's no harm to have one in the component anyway.
