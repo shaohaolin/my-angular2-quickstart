@@ -87,3 +87,11 @@ No more non sense `inputs` array in component. I like this solution because it c
 
 ###5. Is selector attribute necessary for Component?
 Selector is not necessary. I discovered this after I implemented routing in the app. It's no harm to have one in the component anyway.
+
+###6. How to apply different html classes based on dynamic value?
+I have `ngFor` for looping through an array of objects. Each object has multiple attributes. I want to apply different materializecss grid class based on object's ranking (one of the attribute of the object). Here is what I do using `ngClass` in Angular 2.
+```html
+<div class="col s12" *ngFor="#dj of Djs" [ngClass]="{l6: dj.rank === 1, l3: dj.rank < 6, l2: dj.rank >= 6}">
+</div>
+```
+Because I need to evaluate 3 different expressions, I use `ngClass` for apply different style class. I could use the syntax like `[class.l6]="dj.rank===1"`, works in Angular 2. However, the limitation is I can't do multiple evaluation at a time. I have to write a lot `[class....]="..."` to make this happen. 
