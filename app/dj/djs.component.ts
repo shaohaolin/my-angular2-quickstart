@@ -6,15 +6,16 @@ import {Dj} from '../dj';
 
 @Component({
 	selector: 'my-djs',
-	templateUrl: 'app/dj-detail/dj-detail.html',
+	templateUrl: 'app/dj/djs.component.html',
 	directives: [DjDetailComponent]
 })
 
 export class DjsComponent implements OnInit {
 	public Djs: Dj[];
 	public selectedDj: Dj;
+	public title: String = "Shaohao";
 
-	constructor(private _djservice: DjService) { }
+	constructor(private _djservice: DjService, private _router: Router) { }
 
 	getDjs() {
 		this.selectedDj = undefined;
@@ -27,6 +28,10 @@ export class DjsComponent implements OnInit {
 
 	ngOnInit() {
 		this.Djs = this.getDjs();
+	}
+
+	gotoDetail(dj: Dj) {
+		this._router.navigate(['DjDetail', { id: dj.id}]);
 	}
 
 	onSelect(dj: Dj) { this.selectedDj = dj; }

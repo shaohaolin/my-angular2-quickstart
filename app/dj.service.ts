@@ -28,4 +28,10 @@ export class DjService {
 			console.log("Added new dj: " + dj.name + " to the list.");
 	 	});
 	}
+
+	getDj(id: number) {
+		return Promise.resolve(Djs).then(
+			djs => djs.filter(d => d.id === id)[0]
+		)
+	}
 }

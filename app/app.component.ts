@@ -14,8 +14,8 @@ import {DjService} from './dj.service';
 })
 @RouteConfig([
 	{path: '/dashboard', name:'Dashboard', component: DashboardComponent, useAsDefault: true},
-	{ path: '/djs', name:  'Djs', component: DjsComponent}
-	//{ path: '/detail/:id', name: 'DjDetail', component: DjDetailComponent}
+	{ path: '/djs', name:  'Djs', component: DjsComponent},
+	{ path: '/detail/:id', name: 'DjDetail', component: DjDetailComponent}
 ])
 
 export class AppComponent { 

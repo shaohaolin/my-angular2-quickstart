@@ -1,11 +1,8 @@
-<div class="center-align">
-	<h1>Top DJ list of 2015</h1>
-</div>
 <div class="row" style="margin-bottom: 0;">
 	<div class="col s12 m6">
 		<div class="card">
 			<div class="card-header" style=" background-color: #46BBCA; padding: 10px 20px; font-weight: bold;">
-				<span class="card-title" style="color: white; text-transform: uppercase;">Top Djs</span>
+				<span class="card-title" style="color: white; text-transform: uppercase;">{{title}}'s favourite DJ list of 2015</span>
 			</div>
 			<div class="card-content">
 				<table class="bordered">
@@ -14,7 +11,8 @@
 							<td>{{ dj.rank }}</td>
 							<td>{{ dj.name }}</td>
 							<td>
-								<button class="btn waves-effect waves-light">
+								<button class="btn waves-effect waves-light"
+									(click)="gotoDetail(dj)">
 									View details
 								</button>
 							</td>

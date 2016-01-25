@@ -17,4 +17,8 @@ export class DashboardComponent implements OnInit {
 	ngOnInit() {
 		this._djservice.getDjs().then(Djs => this.Djs = Djs);
 	}
+
+	gotoDetail(dj: Dj) {
+		this._router.navigate(['DjDetail', { id: dj.id }]);
+	}
 }
