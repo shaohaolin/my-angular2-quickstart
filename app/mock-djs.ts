@@ -1,7 +1,7 @@
 import {Dj} from './dj';
 
 export var Djs: Dj[] = [
-	{ id: 11, name: 'Dimitri Vegas & Like Mike', rank: 1, imageUrl: 'app/images/Dj-Dimitri-Vegas-Like-Mike.png' },
+	{ id: 11, name: 'Dimitri Vegas & Like Mike', rank: 1, imageUrl: 'app/images/Dj-Dimitri-Vegas-Like-Mike.jpg' },
 	{ id: 12, name: 'Hardwell', rank: 2, imageUrl: 'app/images/Dj-Hardwell.jpg' },
 	{ id: 13, name: 'Matin Garrix', rank: 3, imageUrl: 'app/images/Dj-Martin-Garrix.jpg' },
 	{ id: 14, name: 'Admin Van Buuran', rank: 4, imageUrl: 'app/images/Dj-Admin-Van-Buuran.jpg' },
@@ -18,9 +18,8 @@ export var Djs: Dj[] = [
 	{ id: 25, name: 'Dash Berlin', rank: 15, imageUrl: 'app/images/Dj-Dash-Berlin.jpg' },
 	{ id: 26, name: 'DVBBS', rank: 16, imageUrl: 'app/images/Dj-DVBBS.jpg' },
 	{ id: 27, name: 'Axwell & Ingr0sso', rank: 17, imageUrl: 'app/images/Dj-Axwell&Ingr0sso.jpg' },
-	{ id: 28, name: 'Nicky Romero ', rank: 18, imageUrl: 'app/images/Dj-Nicky-Romero.jpg' },
-	{ id: 29, name: 'Blasterjaxx', rank: 19, imageUrl: 'app/images/Dj-Blasterjaxx.jpg' },
-	{ id: 30, name: 'Diplo', rank: 20, imageUrl: 'app/images/Dj-Diplo.jpg' }
+	{ id: 28, name: 'Blasterjaxx', rank: 19, imageUrl: 'app/images/Dj-Blasterjaxx.jpg' },
+	{ id: 29, name: 'Diplo', rank: 20, imageUrl: 'app/images/Dj-Diplo.jpg' }
 ];
 
 // Source from: http://djmag.com/top100dj
