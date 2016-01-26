@@ -1,21 +1,34 @@
-<div class="col s12 m6" *ngIf="dj">
-	<div class="superhero-container card">
-		<div class="card-header" style=" background-color: #46BBCA; padding: 10px 20px; font-weight: bold;">
-			<span class="card-title" style="color: white; text-transform: uppercase;">
-				{{dj.name}}
-			</span>				
-		</div>
-		<div class="card-content">
-			<div class="row">
-				<div class="col">
-					<label for="name">Name</label>
-					<input [(ngModel)]="dj.name" placeholder="name" />
-				</div>	
-				<div class="col">
-					<label for="rank">Rank</label>
-					<input [(ngModel)]="dj.rank" placeholder="rank" type="number" />
-				</div>
-			</div>
-		</div>
-	</div>		
+<div class="row" *ngIf="dj">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content" style="padding: 0px">
+        <div class="row">
+          <div class="col s12 m6" id="dj-info-container" style="border-right: 1px solid #e6e6e6; padding: 0;">
+            <img class="materialboxed col s12" src="http://lolp1.c3cdn.com/wp/wp-content/uploads/2015/03/the-chainsmokersnew.jpg" style="padding: 0;">
+          </div>
+          <div class="col s12 m6" id="dj-music-container">
+            <div class="row">
+              <div class="col s12">
+                <h3 style="padding-top: 3rem;">{{ dj.name }}</h3>
+                <h5>Rank: {{ dj.rank }}</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <h6>Genres</h6>
+                <a style="padding-right: 0.75em; color: rgba(0,0,0,0.87); text-decoration: underline; cursor: pointer;">Electro House</a>
+                <a style="padding-right: 0.75em;color: rgba(0,0,0,0.87); text-decoration: underline; cursor: pointer;">Progressive House</a>
+                <a style="padding-right: 0.75em; color: rgba(0,0,0,0.87); text-decoration: underline; cursor: pointer;">EDM</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <p style="font-size: 1rem;">The Chainsmokers are an American DJ duo consisting of Andrew Taggart and Alex Pall. Their 2014 single "#Selfie" reached No. 16 on the US charts and No. 11 on the UK charts while their 2015 single "Roses" reached No. 8 on the US charts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

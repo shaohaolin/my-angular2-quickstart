@@ -19,7 +19,8 @@ export var Djs: Dj[] = [
 	{ id: 26, name: 'DVBBS', rank: 16, imageUrl: 'app/images/Dj-DVBBS.jpg' },
 	{ id: 27, name: 'Axwell & Ingr0sso', rank: 17, imageUrl: 'app/images/Dj-Axwell&Ingr0sso.jpg' },
 	{ id: 28, name: 'Blasterjaxx', rank: 19, imageUrl: 'app/images/Dj-Blasterjaxx.jpg' },
-	{ id: 29, name: 'Diplo', rank: 20, imageUrl: 'app/images/Dj-Diplo.jpg' }
+	{ id: 29, name: 'Diplo', rank: 20, imageUrl: 'app/images/Dj-Diplo.jpg' },
+	{ id: 30, name: 'Chainsmokers', rank: 31, imageUrl: 'app/images/Dj-Chainsmokers.jpg' }
 ];
 
 // Source from: http://djmag.com/top100dj
