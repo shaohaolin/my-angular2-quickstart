@@ -99,3 +99,22 @@ Here is what I do using `ngClass` in Angular 2.
 </div>
 ```
 Because I need to evaluate 3 different expressions, I use `ngClass` for apply different style class. I could use the syntax like `[class.l6]="dj.rank===1"`, works in Angular 2. However, the limitation is I can't do multiple evaluation at a time. I have to write a lot `[class....]="..."` to make this happen. 
+
+###7. How to make one to many relationship in Typescript?
+I am at the stage that I want to develop a one-to-many relation for Dj object. It makes sense that each Dj has a lot of songs, but how can I implement in Typescript?
+
+![One-To-Many](https://github.com/shaohaolin/my-angular2-quickstart/blob/master/app/images/One-to-many.JPG)
+
+Define a Song class and import to Dj interface:
+```Typescript
+import {Song} from './song'
+export interface Dj {
+	id: number;
+	name: string;
+	rank: number;
+	imageUrl?: string;
+	songs?: Song[];
+}
+
+```
+Notice that: the question mark ? indicated that the attribute is optional, another words, is not required. I feel like I should define Dj to **Class** instead of **interface** because now I need some logic for Dj class and I can have some setter and getter function, particular useful for setting and getting songs. But for now, I will just leave it as interface, cause it does its job.
