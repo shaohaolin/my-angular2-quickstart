@@ -5,12 +5,13 @@ import {DjDetailComponent} from './dj-detail/dj-detail.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 //import {DjFormComponent} from './dj-form/dj-form.component';
 import {DjService} from './dj.service';
+import {SongService} from './song.service';
 
 @Component({
 	selector: 'my-app',
 	templateUrl: 'app/app.html',
 	directives: [ROUTER_DIRECTIVES],
-	providers: [DjService, ROUTER_PROVIDERS]
+	providers: [DjService, SongService, ROUTER_PROVIDERS]
 })
 @RouteConfig([
 	{path: '/dashboard', name:'Dashboard', component: DashboardComponent, useAsDefault: true},
