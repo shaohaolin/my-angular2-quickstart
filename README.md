@@ -120,7 +120,7 @@ export interface Dj {
 Notice that: the question mark ? indicated that the attribute is optional, another words, is not required. I feel like I should define Dj to **Class** instead of **interface** because now I need some logic for Dj class and I can have some setter and getter function, particular useful for setting and getting songs. But for now, I will just leave it as interface, cause it does its job.
 
 ###8. How to filter an array based on some value in TypeScript way?
-Recall from Question 7, I have a one-to-many relationship in my application: one Dj has many songs. Now I encouter a problem that if I receive 100 random songs from the backend, how can I quickly identify which songs belongs to which dj? An Easy way to implment this is let backend handle it by passing the ``dj_id`` through API and writes an query to get all the songs belong to this ``dj_id``. What if I don't have the luxury, I have to handle it in the front-end side? (Yeah, I know, the backend guy is too lazy.) Luckily, I can use `arr.filter()` method which is a standard function in ES5. I wasn't so sure how to use `arr.filter()` in TypeScript; however, [John Papa](http://johnpapa.net/) shows a good example in his repo.
+Recall from Question 7, I have a one-to-many relationship in my application: one Dj has many songs. Now I encouter a problem that if I receive 100 random songs from the backend, how can I quickly identify which song belongs to which Dj? An Easy way to implment this is to let backend handle it by passing the ``dj_id`` through API and writes an query to get all the songs belong to this ``dj_id``. What if I don't have the luxury, I have to handle it in the front-end side? (Yeah, I know, the backend guy is too lazy.) Luckily, I can use `arr.filter()` method which is a standard function in ES5. I wasn't so sure how to use `arr.filter()` in TypeScript; however, [John Papa](http://johnpapa.net/) shows a good example in his repo.
 
 ```TypeScript
 getHero(id: number) {
@@ -129,7 +129,7 @@ getHero(id: number) {
 	);
 }
 ```
-Basically, it is saying get me all `h`(hero) that saticified its `id` is equivalent to the `id` passing from the parameter. Excatly what I want: give me all the songs that belong to this dj. 
+Basically, it is saying get me all `h`(hero) that saticified its `id` is equivalent to the `id` passing from the parameter. Excatly what I want: give me all the songs that belong to this Dj. 
 
 My implmentation:
 ```TypeScript
