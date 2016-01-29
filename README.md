@@ -143,7 +143,7 @@ A question might rise: Where does this `song` come from? <br/> `song` is a tempo
 
 ###9. What changes do I need to do to my SystemJS config blocks to tell it to look in dist/ for the compiled JS files?
 I believe a lot of people like me who is very new to SystemJS and TypeScript don't like the **.js** and **.js.map** complie right beside **.ts**. I would like to separate src files and complie files. But, how to do that and also tell SystemJS to look into that?
-<br/>First, need to add **outDir** attribute in `tsconfig.json` file. **outDir** allows you to [redirect output structure to the directory].(http://json.schemastore.org/tsconfig)
+<br/>First, need to add **outDir** attribute in `tsconfig.json` file. **outDir** allows you to [redirect output structure to the directory.](http://json.schemastore.org/tsconfig)
 ```json
 {
   "compilerOptions": {
