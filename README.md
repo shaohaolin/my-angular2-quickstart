@@ -140,3 +140,41 @@ getSongsByDjId(dj_id: number) {
 }
 ```
 A question might rise: Where does this `song` come from? <br/> `song` is a temporary variable that reference an element of `songs`. I can name it whatever I want.
+
+###9. What changes do I need to do to my SystemJS config blocks to tell it to look in dist/ for the compiled JS files?
+I believe a lot of people like me who is very new to SystemJS and TypeScript don't like the **.js** and **.js.map** complie right beside **.ts**. I would like to separate src files and complie files. But, how to do that and also tell SystemJS to look into that?
+<br/>First, need to add **outDir** attribute in `tsconfig.json` file. **outDir** allows you to [redirect output structure to the directory].(http://json.schemastore.org/tsconfig)
+```json
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "outDir": "dist"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+```
+
+And then, I need to tell SystemJS to look in the `dist` folder, because I ask to put all the complier `.js` and `.js.map` code to my `dist/` folder.
+```javascript
+System.config({
+	map: { app: 'dist'},
+    packages: {        
+      app: {
+        format: 'register',
+        defaultExtension: 'js'
+      }
+    }
+  });
+  System.import('app/boot')
+        .then(null, console.error.bind(console));
+```
+According to [Rob Wormald](https://github.com/robwormald), I need to add `map: { app: 'dist' }` in the `System.config()`. Very nice, now the structure of the application is much nicer and I can just git ignore the src folder.
